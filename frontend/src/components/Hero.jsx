@@ -1,36 +1,56 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Chip } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <Box sx={{ textAlign: "center", py: 6 }}>
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
+    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <Box sx={{ py: 3 }}>
+        <Chip
+          label="Cohere AI • FastAPI • SQLite"
+          sx={{
+            mb: 2,
+            bgcolor: "rgba(37,99,235,.15)",
+            color: "#60A5FA",
+            fontWeight: 600,
+          }}
+        />
+
         <Typography
-          variant="h2"
+          variant="h3"
           sx={{
             color: "white",
             fontWeight: 800,
-            lineHeight: 1,
+            lineHeight: 1.1,
           }}
         >
           AI Sales Lead
-          <Box
-            component="span"
-            sx={{
-              display: "block",
-              background: "linear-gradient(90deg,#60A5FA,#8B5CF6)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Qualification Assistant
-          </Box>
         </Typography>
 
-        <Typography sx={{ color: "#94A3B8", mt: 3, fontSize: 18 }}>
-          Motion-first enterprise dashboard powered by Cohere AI.
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 800,
+            background: "linear-gradient(90deg,#2563EB,#7C3AED)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            lineHeight: 1.1,
+          }}
+        >
+          Qualification Assistant
         </Typography>
-      </motion.div>
-    </Box>
+
+        <Typography
+          sx={{
+            mt: 2,
+            color: "#94A3B8",
+            maxWidth: 650,
+            fontSize: "1rem",
+          }}
+        >
+          Qualify potential customers using AI, match products from a knowledge
+          base, and generate actionable sales insights instantly.
+        </Typography>
+      </Box>
+    </motion.div>
   );
 }
