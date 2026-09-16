@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+backend/.env
+
+# Database
+backend/sales_leads.db
+
+# Build files
+frontend/dist/
+.vite/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
